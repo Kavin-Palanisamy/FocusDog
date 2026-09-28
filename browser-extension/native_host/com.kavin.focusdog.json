@@ -1,0 +1,10 @@
+{
+  "name": "com.kavin.focusdog",
+  "description": "FocusDog Browser Activity Native Messaging Bridge",
+  "path": "focusdog-host.bat",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://*/*",
+    "extension://*/*"
+  ]
+}

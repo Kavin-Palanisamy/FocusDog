@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FocusDog</title>
+  <style>
+    body {
+      width: 260px;
+      margin: 0;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0F172A;
+      color: #F8FAFC;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #38BDF8;
+    }
+    .badge {
+      font-size: 10px;
+      background: rgba(56, 189, 248, 0.15);
+      color: #38BDF8;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: auto;
+    }
+    .status-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    .dot-online {
+      background: #10B981;
+      box-shadow: 0 0 8px #10B981;
+    }
+    .dot-offline {
+      background: #EF4444;
+    }
+    .label {
+      color: #94A3B8;
+      font-size: 11px;
+    }
+    .value {
+      color: #E2E8F0;
+      font-family: monospace;
+      font-size: 12px;
+      word-break: break-all;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <span style="font-size: 18px;">🐶</span>
+    <span class="title">FocusDog</span>
+    <span id="browserBadge" class="badge">Browser</span>
+  </div>
+
+  <div class="status-row">
+    <div id="statusDot" class="dot dot-offline"></div>
+    <span id="statusText" style="font-size: 12px; font-weight: 600;">Connecting...</span>
+  </div>
+
+  <div class="card">
+    <div class="label">Current Active Site:</div>
+    <div id="activeSite" class="value" style="margin-top: 4px;">Detecting...</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
